@@ -1,0 +1,6 @@
+framework module Pods_xy_inc {
+  umbrella header "Pods-xy-inc-umbrella.h"
+
+  export *
+  module * { export * }
+}
