@@ -1,6 +1,6 @@
 # xy-inc
 
-Para executar o projeto, basta baixa-lo via git (git pull origin master).
+Para executar o projeto, basta baixa-lo via git (git remote add origin https://github.com/luanhenriq10/xy-inc && git pull origin master).
 
 Após o pull do projeto, abra a pasta e abra o projeto e clique duas vezes em xy-inc.xcworkspace (Projeto com Pods) e não no xy-inc.xcodeproj
 
