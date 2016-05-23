@@ -87,8 +87,6 @@ class FirstTab: UIViewController,  UITableViewDelegate, UISearchBarDelegate  {
             // Call the service to get movies
             RestApiManager.sharedInstance.getMovies({ json in
                 if json != nil {
-                    print(json)
-                    
                     // If not found the movie
                     if String(json["Response"]) == "False"{
                         self.error = true;
@@ -161,10 +159,7 @@ class FirstTab: UIViewController,  UITableViewDelegate, UISearchBarDelegate  {
         RestApiManager.sharedInstance.getDataFromUrl(url) { (data, response, error)  in
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 guard let data = data where error == nil else { return }
-                
-                print(response?.suggestedFilename ?? "")
-                print("Download Finished")
-                
+
                 self.movie.savedImage = NSData(data: UIImageJPEGRepresentation(UIImage(data: data)!, 1)!)
                 self.saveIntoDatabase()
                 self.activityIndicator.stopAnimating()

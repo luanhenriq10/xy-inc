@@ -36,8 +36,6 @@ class RestApiManager: NSObject {
         let session = NSURLSession.sharedSession()
         
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
-            print("Error \(error)")
-            print("Json \(data)")
             if data != nil{
                 let json:JSON = JSON(data: data!)
                 onCompletion(json, error)
